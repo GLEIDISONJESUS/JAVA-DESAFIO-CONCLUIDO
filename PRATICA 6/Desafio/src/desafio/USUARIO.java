@@ -14,14 +14,15 @@ import java.util.Scanner;
 public class USUARIO {
 
     public String usuario;
+    public String senha;
     public String tarefa;
     public String programa;
 
-    public String getUsuario() {
+   public String getUsuario() {
         return usuario;
     }
 
-    public String setUsuario() {
+    public void setUsuario() {
         Scanner sc = new Scanner(System.in);
         System.out.println("===========DADOS DOS USUARIO===========");
         System.out.print("Digite seu email: ");
@@ -29,29 +30,33 @@ public class USUARIO {
         System.out.print("");
         System.out.print("Digite sua senha: ");
         String senha = sc.nextLine();
-        return usuario;
+        this.usuario = (email +(",  a senha é: " + senha));       
+        
     }
+
 
     public String getTarefa() {
         return tarefa;
     }
 
-    public String setTarefa() {
+    public void setTarefa() {
         Scanner sc = new Scanner(System.in);
         System.out.print("Digite uma tarefa a ser realizada ");
-        String tarefa1 = sc.nextLine();
+        String tarefa = sc.nextLine();
         System.out.print("Digite a data de terminio ");
         String data = sc.nextLine();
-        return tarefa;
+        this.tarefa = (tarefa + (", e a data de terminio é : " + data));
+        
     }
 
     public String getPrograma() {
         return programa;
     }
 
-    public void setPrograma(String programa) {
+    public void setPrograma() { 
         this.programa = programa;
     }
 
-    
 }
+
+    
